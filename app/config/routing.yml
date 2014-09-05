@@ -1,0 +1,13 @@
+simple_profile:
+    resource: "@SimpleProfileBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# app/config/routing.yml
+acme_website:
+    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
+    prefix: /
+
+# src/Acme/DemoBundle/Resources/config/routing.yml
+random:
+    path: /random/{limit}
+    defaults: { _controller: AcmeDemoBundle:Random:index }

@@ -11,3 +11,15 @@ acme_website:
 random:
     path: /random/{limit}
     defaults: { _controller: AcmeDemoBundle:Random:index }
+
+profil:
+    path: /profil/
+    defaults: { _controller: SimpleProfileBundle:Default:index }
+
+profil_dodaj:
+    path: /profil/dodaj/
+    defaults: { _controller: SimpleProfileBundle:Default:create }
+
+profil_ispis:
+    path: /profil/ispis/
+    defaults: { _controller: SimpleProfileBundle:Default:show }

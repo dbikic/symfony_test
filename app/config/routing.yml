@@ -1,3 +1,7 @@
+simple_task:
+    resource: "@SimpleTaskBundle/Resources/config/routing.yml"
+    prefix:   /
+
 simple_profile:
     resource: "@SimpleProfileBundle/Resources/config/routing.yml"
     prefix:   /
@@ -18,8 +22,20 @@ profil:
 
 profil_dodaj:
     path: /profil/dodaj/
-    defaults: { _controller: SimpleProfileBundle:Default:create }
+    defaults: { _controller: SimpleProfileBundle:Osoba:new }
 
 profil_ispis:
     path: /profil/ispis/
-    defaults: { _controller: SimpleProfileBundle:Default:show }
+    defaults: { _controller: SimpleProfileBundle:Osoba:index }
+
+profil_upisi:
+    path: /
+    defaults: { _controller: SimpleProfileBundle:Osoba:create }
+
+profil_pregled:
+    path: /profil/pregled/{id}
+    defaults: { _controller: SimpleProfileBundle:Osoba:show }
+
+profil_uredi:
+    path: /profil/uredi/{id}
+    defaults: { _controller: SimpleProfileBundle:Osoba:edit }

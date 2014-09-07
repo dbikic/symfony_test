@@ -1,0 +1,36 @@
+{% extends 'SimpleProfileBundle::layout.html.twig' %}
+
+{% block body -%}
+<h1>Popis svih kontakata</h1>
+</br>
+<table border="1">
+	<tr><td>Id</td><td>Ime</td><td>Prezime</td><td>Email</td><td>Telefon</td><td>Adresa</td><td>Pregledaj</td><td>Uredi</td></tr>
+    {% for osoba in osobe %}
+    	<tr>
+			<td>{{osoba.id}}</td>
+			<td>{{osoba.name}}</td>
+			<td>{{osoba.surname}}</td>
+			<td>{{osoba.email}}</td>
+			<td>{{osoba.phone}}</td>
+			<td>{{osoba.address}}</td>
+			<td><a href="{{ path('profil_pregled',{ 'id': osoba.id })  }}">
+					Link
+				</a>
+			</td>
+			<td><a href="{{ path('profil_uredi',{ 'id': osoba.id })  }}">
+					Link
+				</a>
+			</td>
+		</tr>
+    
+    {% endfor %}
+</table>
+</br></br>
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('profil_dodaj') }}">
+            Dodaj novi
+        </a>
+    </li>
+</ul>
+{% endblock %}

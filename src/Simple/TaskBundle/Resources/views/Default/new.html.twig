@@ -1,0 +1,9 @@
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+	{{ form_errors(form) }}
+	
+	{{ form_row(form.name) }}
+	{{ form_row(form.surname) }}
+	{{ form_row(form.email) }}
+	{{ form_row(form.phone) }}
+	{{ form_row(form.address) }}
+{{ form_end(form) }}

@@ -1,0 +1,28 @@
+{% extends 'SimpleProfileBundle::layout.html.twig' %}
+
+
+{% block body -%}
+<h1>Osoba:</h1>
+</br>
+<ul class="record_actions">
+    <li>        
+        Ime: {{osoba.name}} 
+    </li>
+    <li>        
+        Prezime: {{osoba.surname}}
+    </li>
+    <li>        
+        Email: {{osoba.email}}
+    </li>
+    <li>        
+        Telefon: {{osoba.phone}}
+    </li>
+    <li>        
+        Adresa: {{osoba.address}}
+    </li>
+</ul>
+
+<a href="{{ path('profil_ispis') }}">
+    Pregledaj sve
+</a>
+{% endblock %}

@@ -39,3 +39,11 @@ profil_pregled:
 profil_uredi:
     path: /profil/uredi/{id}
     defaults: { _controller: SimpleProfileBundle:Osoba:edit }
+
+profil_azuriraj:
+    path: /profil/azuriraj/{id}
+    defaults: { _controller: SimpleProfileBundle:Osoba:update }
+
+profil_brisi:
+    path: /profil/brisi/{id}
+    defaults: { _controller: SimpleProfileBundle:Osoba:delete }

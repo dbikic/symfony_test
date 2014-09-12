@@ -25,8 +25,8 @@ security:
         demo_secured_area:
             pattern:    ^/demo/secured/
             form_login:
-                check_path: _demo_security_check
-                login_path: _demo_login
+                check_path: login_check
+                login_path: login
             logout:
                 path:   _demo_logout
                 target: _demo
@@ -36,3 +36,5 @@ security:
 
     access_control:
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_ADMIN }

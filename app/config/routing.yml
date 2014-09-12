@@ -47,3 +47,10 @@ profil_azuriraj:
 profil_brisi:
     path: /profil/brisi/{id}
     defaults: { _controller: SimpleProfileBundle:Osoba:delete }
+
+login:
+    path: /profil/login
+    defaults: { _controller: SimpleProfileBundle:Security:login }
+
+login_check:
+    path: /profil/login_check

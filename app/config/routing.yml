@@ -7,9 +7,6 @@ simple_profile:
     prefix:   /
 
 # app/config/routing.yml
-acme_website:
-    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
-    prefix: /
 
 # src/Acme/DemoBundle/Resources/config/routing.yml
 random:
